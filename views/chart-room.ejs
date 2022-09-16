@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: skyblue; color: #fff;}
+        h1{text-transform: uppercase;}
+        form{width: 400px; max-width: 100%; padding: 20px; margin: 20px auto;}
+        input, label{display: block; margin: 10px; padding: 5px; width: 100%;}
+        input[type='submit']{width: auto;}
+    </style>
+</head>
+<body>
+    <%- include('partials/nav')%>
+    <h1>This a server chat room.</h1>
+    <p>NOTE: your chart will disapair once you refresh this page</p>
+    <form method="POST" action="/chart-room">
+        <label for="who">Name</label>
+        <input type="text" name="who" value="<%= data.who %>">
+        <label for="reciepient">Reciepient</label>
+        <input type="text" name="reciepient" value="<%= data.reciepient %>" required>
+        <label for="chart">chart box</label>
+        <textarea name="chartBox" id="" cols="60" rows="10" value="<%= data.dept %>" required></textarea>
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>
