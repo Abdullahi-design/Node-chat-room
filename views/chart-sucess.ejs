@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: skyblue; color: #fff;}
+        h1{text-transform: uppercase; text-align: center;}
+        h3,p{padding-left: 20px;}
+        form{width: 400px; max-width: 100%; padding: 20px; margin: 20px auto;}
+        input, label{display: block; margin: 10px; padding: 5px; width: 100%;}
+        input[type='submit']{width: auto;}
+        span{font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(51, 50, 50);}
+    </style>
+</head>
+<body>
+    <%- include('partials/nav')%>
+    <h1>This a server chat room.</h1>
+    <h3><%= data.who %> says:  <span><%= data.chartBox %></span></h3>
+    <p>Message was delivered sucessfully to <%= data.reciepient %></p>
+</body>
+</html>
